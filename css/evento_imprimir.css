@@ -1,0 +1,76 @@
+#formato-grid{
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template: [header-left] "head"   [header-right]
+                 [main-left]   "main "   [main-right]
+                 [footer-left] "foot"   [footer-right];
+  grid-template-columns: 1fr;
+  font-family: Arial;
+}
+
+#header {
+  grid-area: head;
+  border-style: solid;
+}
+  #tituloWeb{
+    font-size: 300%;
+    margin-left: 15px;
+  }
+  #logo{
+    float: right;
+    margin: 10px;
+    padding: 5px;
+    width: 15em;
+    height: 15em;
+    margin-right: 10em;
+    filter:grayscale(100%);
+  }
+
+#contenido{
+  grid-area: main;
+  border-style: solid;
+}
+  #contenidoEvento {
+    float: left;
+    margin: 10px;
+    background-color: white;
+    width: 70%;
+  }
+    #tituloEvento{
+      font-size: 200%;
+    }
+    #organizador {
+      font-size: 150%;
+      margin: 15px;
+    }
+    #fecha{
+      margin: 20px;
+    }
+
+  .espacioFoto {
+    float: right;
+    border-style: dashed;
+    width: 25%;
+  }
+    .espacioFoto img{
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 90%;
+      height: 200px;
+      filter:grayscale(100%);
+    }
+    .espacioFoto p{
+      background-color: #C1C1C1;
+      font-weight: bold;
+      text-align: center;
+      padding: 0;
+      margin: 0;
+    }
+
+#piePag{
+  border-style: solid;
+  grid-area: foot;
+  text-align: center;
+}

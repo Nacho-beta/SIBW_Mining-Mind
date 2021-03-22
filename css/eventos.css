@@ -1,0 +1,138 @@
+#formato-grid{
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template: [header-left] "head head"   [header-right]
+                 [main-left]   "nav main "   [main-right]
+                 [footer-left] "foot foot"   [footer-right];
+  grid-template-columns: 400px 1fr;
+}
+
+#header {
+  grid-area: head;
+  background-image: url("../imgs/grass.png");
+  background-color: #5DBB63;
+}
+  #tituloWeb{
+    font-size: 300%;
+  }
+  #logo{
+    float: left;
+    margin: 10px;
+    padding: 5px;
+    width: 15em;
+    height: 15em;
+  }
+
+  #menuGeneros ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+    #menuGeneros ul li {
+      background-color: #1B1E23;
+      position:relative;
+      float:left;
+      margin:0;
+      padding:0;
+      font-size: 20px;
+      color: white;
+      display: block;
+      text-align: center;
+      padding: 15px;
+      text-transform:uppercase;
+    }
+    #menuGeneros ul li:hover {
+      background:#000000;
+    }
+      #menuGeneros ul ul{
+        display: none;
+        position: absolute;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      #menuGeneros ul ul li {
+        float:none;
+        width:150px
+      }
+      #menuGeneros ul li:hover > ul {
+        display:block;
+      }
+
+#aside{
+  background-image: url("../imgs/dirt.jpg");
+  background-color: #80471C;
+  border: solid;
+  grid-area: nav;
+}
+  .noticia{
+    border-bottom: solid;
+    text-align: center;
+  }
+    .imagen{
+      display: block;
+      width: 200px;
+      position: relative;
+      margin-left: auto;
+      margin-right: auto;
+      padding-bottom: 5px;
+    }
+  #espacioReservado{
+    text-align: center;
+    padding-top: 20%;
+  }
+
+#contenido{
+  background-image: url("../imgs/dirt.jpg");
+  background-color: #80471C;
+  grid-area: main;
+}
+  #contenidoEvento {
+    float: left;
+    margin: 10px;
+    background-color: white;
+    width: 70%;
+  }
+    #tituloEvento{
+      font-size: 200%;
+    }
+    #organizador {
+      font-size: 150%;
+      margin: 15px;
+    }
+    #fecha{
+      margin: 20px;
+    }
+
+  .espacioFoto {
+    float: right;
+    border-style: dashed;
+    width: 25%;
+  }
+    .espacioFoto img{
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 90%;
+      height: 200px;
+    }
+    .espacioFoto p{
+      background-color: #DC9456;
+      font-weight: bold;
+      text-align: center;
+      padding: 0;
+      margin: 0;
+    }
+
+#piePag{
+  background-image: url("../imgs/stone.jpg");
+  background-color: #808080;
+  grid-area: foot;
+  text-align: center;
+}
+  .logoRed{
+    padding-left: 50px;
+    padding-right:50px;
+    width: 5em;
+  }
